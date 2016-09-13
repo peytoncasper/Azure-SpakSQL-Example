@@ -6,6 +6,7 @@
 import com.datastax.spark.connector.SomeColumns
 import com.datastax.spark.connector._
 import com.datastax.spark.connector.cql.CassandraConnector
+import org.apache.spark.sql.hive._
 import org.apache.spark.{SparkConf, SparkContext}
 
 object azure_spark_sql_test {
@@ -19,18 +20,21 @@ object azure_spark_sql_test {
 
       .set("", "")
     val sc = new SparkContext(sparkConf)
+    val hiveContext = new HiveContext(sc)
     val hadoopConf=sc.hadoopConfiguration;
-    hadoopConf.set("fs.azure.account.key.ACCOUNT_NAME_OF_STORAGE_ACCOUNT.blob.core.windows.net", "storage_account_key")
+    hadoopConf.set("fs.azure.account.key.account_name.blob.core.windows.net", "key")
 
-    val data = sc.textFile("wasb://CONTAINER_NAME@ACCOUNT_NAME_OF_STORAGE_ACCOUNT.blob.core.windows.net/2016/08/29/00/1596422213_8d4bfbdeb0364be6913a80292a4ef606_1.csv")
+    val data = sc.textFile("wasb://container@account_name.blob.core.windows.net/2016/08/29/00/1596422213_8d4bfbdeb0364be6913a80292a4ef606_1.csv")
     val seq_data = data.map(x => {
       val data = x.split(',')
       (data(0), data(1), data(2), data(2), data(3), data(4), data(5), data(6), data(7))
     })
 
     seq_data.foreach(string => println(string))
+    val peopleSchemaRDD =
 
-    seq_data.saveToCassandra("danieltest", "events", SomeColumns("type", "user", "usertype", "success", "rk", "eventprocessedutctime", "partitionid", "eventenqueuedutctime"))
+//
+//    seq_data.saveToCassandra("danieltest", "events", SomeColumns("type", "user", "usertype", "success", "rk", "eventprocessedutctime", "partitionid", "eventenqueuedutctime"))
 
 
 
