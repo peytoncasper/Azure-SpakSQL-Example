@@ -16,7 +16,7 @@
 [debug] == resolving dependencies for default#azure-spaksql-example-build;0.1-SNAPSHOT [provided]
 [debug] == resolving dependencies default#azure-spaksql-example-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.10.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@28db6b73
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5f246ba3
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4
 [debug] 	found org.scala-lang#scala-library;2.10.4 in sbt-chain
 [debug] 	[2.10.4] org.scala-lang#scala-library;2.10.4
@@ -164,7 +164,7 @@
 [debug] 	jcenter: downloading https://jcenter.bintray.com/jline/jline/2.11/jline-2.11.pom
 [debug] 	jcenter: downloading https://jcenter.bintray.com/jline/jline/2.11/jline-2.11.pom.sha1
 [debug] sha1 OK for https://jcenter.bintray.com/jline/jline/2.11/jline-2.11.pom
-[debug] 	[SUCCESSFUL ] jline#jline;2.11!jline.pom(pom.original) (115ms)
+[debug] 	[SUCCESSFUL ] jline#jline;2.11!jline.pom(pom.original) (182ms)
 [info] Resolving org.sonatype.oss#oss-parent;7 ...
 [debug] sbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;7 {}
 [debug] sbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;7
@@ -1786,7 +1786,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 3449ms :: artifacts dl 74ms
+[debug] :: resolution report :: resolve 3233ms :: artifacts dl 35ms
 [debug] 	report for default#azure-spaksql-example-build;0.1-SNAPSHOT compile produced in /home/peyton/Documents/Azure-SpakSQL-Example/project/target/resolution-cache/reports/default-azure-spaksql-example-build-compile.xml
 [debug] 	report for default#azure-spaksql-example-build;0.1-SNAPSHOT runtime produced in /home/peyton/Documents/Azure-SpakSQL-Example/project/target/resolution-cache/reports/default-azure-spaksql-example-build-runtime.xml
 [debug] 	report for default#azure-spaksql-example-build;0.1-SNAPSHOT test produced in /home/peyton/Documents/Azure-SpakSQL-Example/project/target/resolution-cache/reports/default-azure-spaksql-example-build-test.xml
@@ -1800,5 +1800,5 @@
 [debug] 	report for default#azure-spaksql-example-build;0.1-SNAPSHOT docs produced in /home/peyton/Documents/Azure-SpakSQL-Example/project/target/resolution-cache/reports/default-azure-spaksql-example-build-docs.xml
 [debug] 	report for default#azure-spaksql-example-build;0.1-SNAPSHOT pom produced in /home/peyton/Documents/Azure-SpakSQL-Example/project/target/resolution-cache/reports/default-azure-spaksql-example-build-pom.xml
 [debug] 	report for default#azure-spaksql-example-build;0.1-SNAPSHOT scala-tool produced in /home/peyton/Documents/Azure-SpakSQL-Example/project/target/resolution-cache/reports/default-azure-spaksql-example-build-scala-tool.xml
-[debug] 	resolve done (3449ms resolve - 74ms download)
+[debug] 	resolve done (3233ms resolve - 35ms download)
 [info] Done updating.
